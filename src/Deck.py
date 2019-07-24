@@ -1,5 +1,4 @@
 from Card import Card
-import random
 
 class Deck():
     def __init__(self):
@@ -10,14 +9,8 @@ class Deck():
         # Generate the deck (append each card to the "case" list)
         self.generate_deck()
 
-        # # Shuffle the deck
-        # self.shuffle_deck()
-
     def generate_deck(self):
         for rank in self._RANK:
             for suit in self._SUITS:
                 generated_card = Card(rank, suit)
                 self.case.append(generated_card)
-
-    # def shuffle_deck(self):
-    #     random.shuffle(self._case)

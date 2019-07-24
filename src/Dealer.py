@@ -2,6 +2,10 @@ from Deck import Deck
 import random
 
 class Dealer():
+    """
+    Creates a Dealer object who takes in a deck and shuffles it.
+    Also 'deals' the cards to himself and the player.
+    """
     def __init__(self, deck):
         self.deck = deck.case
         self.shuffle_deck()
@@ -10,7 +14,7 @@ class Dealer():
     def shuffle_deck(self):
         random.shuffle(self.deck)
 
-    def deal(self):
+    def initial_deal(self):
         counter = 0
         player_holder = []
         while counter != 2:
